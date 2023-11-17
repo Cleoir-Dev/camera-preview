@@ -88,7 +88,7 @@ public class CameraPreview extends Plugin implements CameraActivity.CameraPrevie
         bridge.saveCall(call);
         captureCallbackId = call.getCallbackId();
 
-        Integer quality = call.getInt("quality", 85);
+        Integer quality = call.getInt("quality", 100);
         // Image Dimensions - Optional
         Integer width = call.getInt("width", 0);
         Integer height = call.getInt("height", 0);
@@ -104,7 +104,7 @@ public class CameraPreview extends Plugin implements CameraActivity.CameraPrevie
         bridge.saveCall(call);
         snapshotCallbackId = call.getCallbackId();
 
-        Integer quality = call.getInt("quality", 85);
+        Integer quality = call.getInt("quality", 100);
         fragment.takeSnapshot(quality);
     }
 
@@ -218,7 +218,7 @@ public class CameraPreview extends Plugin implements CameraActivity.CameraPrevie
                     @Override
                     public void run() {
                         // fragment.startRecord(getFilePath(filename), position, width, height, quality, withFlash);
-                        fragment.startRecord(getFilePath(filename), position, width, height, 70, withFlash, maxDuration);
+                        fragment.startRecord(getFilePath(filename), position, width, height, 100, withFlash, maxDuration);
                     }
                 }
             );
